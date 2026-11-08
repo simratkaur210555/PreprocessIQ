@@ -64,29 +64,21 @@ flowchart TD
 
 ## Application Previews
 
-### 1. Dataset Upload Interface
+### Preview 1
 
-The application provides a simple interface with four main workflow stages: Upload, Clean, Pick a Target, and Compare.
+![Preview 1](assets/Preview%201.png)
 
-![Preview 1 – PreprocessIQ Upload Interface](assets/Preview%201.png)
+### Preview 2
 
-### 2. Dataset Inspection and Cleaning
+![Preview 2](assets/Preview%202.png)
 
-View the original dataset alongside the cleaned dataset to understand the changes made during data preparation.
+### Preview 3
 
-![Preview 2 – Original and Cleaned Dataset](assets/Preview%202.png)
+![Preview 3](assets/Preview%203.png)
 
-### 3. Dataset Overview and Benchmark Setup
+### Preview 4
 
-Review important dataset information and configure the benchmarking process by selecting the target variable and machine learning task.
-
-![Preview 3 – Dataset Overview and Benchmark Setup](assets/Preview%203.png)
-
-### 4. Benchmark Results
-
-Compare model performance across different preprocessing configurations and identify the best-performing combination.
-
-![Preview 4 – Benchmark Results](assets/Preview%204.png)
+![Preview 4](assets/Preview%204.png)
 
 ## Technology Stack
 
@@ -138,7 +130,7 @@ python -m venv venv
 venv\Scripts\activate
 ```
 
-** macOS / Linux:**
+**macOS / Linux:**
 
 ```bash
 source venv/bin/activate
