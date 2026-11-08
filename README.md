@@ -111,27 +111,27 @@ Explore the different stages of PreprocessIQ through the following application s
 
 ### Preview 1 — Dataset Upload Interface
 
-The application begins with a clean and intuitive interface that introduces the four main stages: Upload, Clean, Pick a Target, and Compare. Users can upload their CSV dataset to start the preprocessing and benchmarking workflow.
+The application begins with a clean and intuitive interface introducing four main stages: Upload, Clean, Pick a Target, and Compare. Users can upload their CSV dataset to start the preprocessing and benchmarking workflow.
 
-![Preview 1](assets/Preview1.png)
+![Preview 1](assets/preview1.png)
 
 ### Preview 2 — Dataset Inspection and Cleaning
 
-This stage presents the original dataset alongside the cleaned dataset, allowing users to examine the data before and after automated preparation and understand the changes made during the cleaning process.
+This stage displays the original dataset alongside the cleaned dataset, allowing users to examine the data before and after automated preparation.
 
-![Preview 2](assets/Preview2.png)
+![Preview 2](assets/preview2.png)
 
 ### Preview 3 — Dataset Overview and Benchmark Configuration
 
-Get an overview of the dataset and configure the benchmarking process. Users can review important dataset information, select the target variable, and set up the appropriate machine learning task.
+Review important dataset information, select the target variable, and configure the appropriate machine learning task before benchmarking.
 
-![Preview 3](assets/Preview3.png)
+![Preview 3](assets/preview3.png)
 
 ### Preview 4 — Benchmark Results and Best Combination
 
-View and compare the performance of different preprocessing and machine learning combinations. The results highlight the best-performing configuration based on the evaluation metrics used for the selected task.
+Compare the performance of different preprocessing and machine learning combinations and identify the best-performing configuration based on the evaluation metrics.
 
-![Preview 4](assets/Preview4.png)
+![Preview 4](assets/preview4.png)
 
 ## Technology Stack
 
