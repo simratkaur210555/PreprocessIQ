@@ -1,51 +1,94 @@
 # PreprocessIQ
+### Simplifying Machine Learning Preprocessing Through Intelligent Benchmarking
 
-### An Intelligent Benchmarking Platform for Machine Learning Preprocessing
+<p align="center">
+  <strong>Upload. Prepare. Benchmark. Compare.</strong>
+  <br>
+  An interactive platform that brings data preprocessing and machine learning model evaluation together in one place.
+</p>
 
-## Overview
+---
 
-PreprocessIQ is a Streamlit-based application designed to simplify data preprocessing and evaluate different preprocessing techniques for machine learning tasks.
+## About the Project
 
-The platform allows users to upload CSV datasets, inspect their contents, prepare data, select a target variable, and compare multiple combinations of preprocessing techniques and machine learning models.
+Machine learning performance depends not only on the algorithm selected but also on how the data is prepared. Choosing the right imputation strategy, scaling technique, and model can significantly influence the final results.
 
-Instead of manually experimenting with different preprocessing configurations, PreprocessIQ automates the benchmarking process and identifies the best-performing combination based on model evaluation metrics.
+**PreprocessIQ** is an interactive machine learning preprocessing and benchmarking platform built using Python and Streamlit. It simplifies this experimentation process by allowing users to inspect datasets, prepare data, explore different preprocessing configurations, and compare machine learning models through cross-validation.
 
-The application currently uses `quikr_car.csv` as an example dataset. However, users can upload other compatible CSV datasets.
+Rather than manually testing preprocessing techniques and algorithms one by one, PreprocessIQ automates the comparison process and helps identify the best-performing combination for a given dataset.
+
+The platform supports both **Classification and Regression** tasks and provides an intuitive interface to understand the complete workflow, from uploading a dataset to evaluating benchmark results.
+
+The application uses `quikr_car.csv` as an example dataset, but users can upload other compatible CSV datasets.
+
+## Why PreprocessIQ?
+
+Preprocessing is an essential part of every machine learning workflow, yet selecting suitable techniques often involves repetitive experimentation.
+
+PreprocessIQ addresses this by bringing the major stages of data preparation and model comparison into a single application.
+
+- **Less Manual Experimentation:** Automatically evaluates multiple preprocessing configurations instead of requiring users to test each one separately.
+- **Structured Data Preparation:** Helps inspect and prepare datasets before model training.
+- **Fairer Model Comparison:** Uses cross-validation to compare different preprocessing and model combinations.
+- **Task-Based Benchmarking:** Supports separate workflows for classification and regression.
+- **Clear Performance Insights:** Presents benchmark results to help users identify the best-performing combination.
 
 ## Key Features
 
-- **CSV Dataset Upload:** Upload datasets in CSV format for analysis and preprocessing.
-- **Dataset Inspection:** View dataset dimensions, column information, missing values, duplicate records, and data types.
-- **Automated Data Preparation:** Handle missing values, convert suitable numeric-looking columns, process date-like columns, and prepare features for modelling.
-- **Original vs. Cleaned Dataset:** Compare the original dataset with the prepared dataset.
-- **Target Selection:** Select the target column according to the machine learning task.
-- **Classification and Regression:** Support both classification and regression problems.
-- **Preprocessing Comparison:** Evaluate different combinations of scaling and imputation techniques.
-- **Model Benchmarking:** Compare multiple machine learning algorithms using cross-validation.
-- **Performance Evaluation:** Analyse model performance using relevant evaluation metrics.
-- **Best Combination Identification:** Identify the best-performing preprocessing and model combination.
+| Feature | Description |
+|---|---|
+| Dataset Upload | Upload CSV datasets for analysis and benchmarking. |
+| Dataset Inspection | Examine dataset dimensions, data types, missing values, and duplicate records. |
+| Automated Data Preparation | Handle common data-quality issues and prepare features for modelling. |
+| Original vs. Cleaned Data | Compare the dataset before and after preparation. |
+| Target Selection | Choose the target column for the machine learning task. |
+| Classification & Regression | Select the appropriate task based on the target variable. |
+| Preprocessing Configurations | Experiment with different scaling and imputation strategies. |
+| Model Benchmarking | Evaluate multiple machine learning algorithms. |
+| Cross-Validation | Assess model performance using cross-validation. |
+| Performance Comparison | Compare evaluation metrics across different combinations. |
+| Best Combination | Identify the best-performing preprocessing and model combination. |
 
-## How It Works
+## How PreprocessIQ Works
 
-PreprocessIQ follows a structured workflow:
+The application follows a simple four-stage workflow:
 
-1. **Upload:** Upload a CSV dataset.
-2. **Inspect:** Examine the dataset and understand its structure.
-3. **Clean:** Prepare the dataset by handling common data-quality issues.
-4. **Pick a Target:** Select the target column and specify the machine learning task.
-5. **Configure:** Generate different preprocessing configurations.
-6. **Benchmark:** Apply preprocessing pipelines and evaluate suitable machine learning models using cross-validation.
-7. **Compare:** Compare the performance of different combinations.
-8. **Results:** Display benchmark results and identify the best-performing combination.
+<details>
+<summary><strong>01 — Upload</strong></summary>
 
-### Workflow Flowchart
+Upload a CSV dataset and begin exploring its structure and contents.
+
+</details>
+
+<details>
+<summary><strong>02 — Clean</strong></summary>
+
+Inspect the original dataset, handle common data-quality issues, and review the prepared dataset.
+
+</details>
+
+<details>
+<summary><strong>03 — Pick a Target</strong></summary>
+
+Select the target column and choose whether the problem is a classification or regression task.
+
+</details>
+
+<details>
+<summary><strong>04 — Compare</strong></summary>
+
+Run the benchmarking process, evaluate different preprocessing and model combinations, and identify the best-performing configuration.
+
+</details>
+
+### Workflow Architecture
 
 ```mermaid
 flowchart TD
     A([Start]) --> B[Upload CSV Dataset]
     B --> C[Inspect Dataset]
     C --> D[Automated Data Preparation]
-    D --> E[View Original and Cleaned Dataset]
+    D --> E[View Original and Cleaned Data]
     E --> F[Review Dataset Overview]
     F --> G[Select Target Column]
     G --> H[Choose ML Task]
@@ -64,45 +107,61 @@ flowchart TD
 
 ## Application Previews
 
-### Preview 1
+Explore the different stages of PreprocessIQ through the following application screenshots.
 
-![Preview 1](assets/Preview%201.png)
+### Preview 1 — Dataset Upload Interface
 
-### Preview 2
+The application begins with a clean and intuitive interface that introduces the four main stages: Upload, Clean, Pick a Target, and Compare. Users can upload their CSV dataset to start the preprocessing and benchmarking workflow.
 
-![Preview 2](assets/Preview%202.png)
+![Preview 1](assets/Preview1.png)
 
-### Preview 3
+### Preview 2 — Dataset Inspection and Cleaning
 
-![Preview 3](assets/Preview%203.png)
+This stage presents the original dataset alongside the cleaned dataset, allowing users to examine the data before and after automated preparation and understand the changes made during the cleaning process.
 
-### Preview 4
+![Preview 2](assets/Preview2.png)
 
-![Preview 4](assets/Preview%204.png)
+### Preview 3 — Dataset Overview and Benchmark Configuration
+
+Get an overview of the dataset and configure the benchmarking process. Users can review important dataset information, select the target variable, and set up the appropriate machine learning task.
+
+![Preview 3](assets/Preview3.png)
+
+### Preview 4 — Benchmark Results and Best Combination
+
+View and compare the performance of different preprocessing and machine learning combinations. The results highlight the best-performing configuration based on the evaluation metrics used for the selected task.
+
+![Preview 4](assets/Preview4.png)
 
 ## Technology Stack
 
-| Technology | Purpose |
+| Technology | Application |
 |---|---|
 | Python | Core programming language |
-| Streamlit | Interactive web application |
-| Pandas | Dataset manipulation and analysis |
-| NumPy | Numerical operations |
-| Scikit-learn | Preprocessing, machine learning models, and evaluation |
-| Plotly | Data visualization, where used by the application |
+| Streamlit | Interactive application interface |
+| Pandas | Data manipulation and analysis |
+| NumPy | Numerical computations |
+| Scikit-learn | Data preprocessing, machine learning models, pipelines, cross-validation, and evaluation |
+| Plotly | Interactive visualizations, where used in the application |
 
-## File Descriptions
+## Project Files
 
-- **`app.py`** – Main Streamlit application containing the user interface, dataset upload functionality, workflow navigation, and benchmark result presentation.
-- **`benchmark.py`** – Contains the core preprocessing, dataset inspection, feature preparation, model benchmarking, cross-validation, and evaluation logic.
-- **`.streamlit/config.toml`** – Contains Streamlit application configuration settings.
-- **`assets/`** – Stores the application preview screenshots displayed in this README.
-- **`requirements.txt`** – Contains the Python dependencies required to run the application.
-- **`.gitignore`** – Specifies files and directories that should not be tracked by Git.
+- **`app.py`** — Main Streamlit application responsible for the interface, dataset upload, workflow navigation, and presentation of benchmark results.
+- **`benchmark.py`** — Core implementation of dataset inspection, data preparation, preprocessing configurations, model benchmarking, cross-validation, and performance evaluation.
+- **`.streamlit/config.toml`** — Streamlit application configuration.
+- **`assets/`** — Contains the four application preview screenshots used in this README.
+- **`requirements.txt`** — Lists the Python dependencies required to run the application.
+- **`.gitignore`** — Specifies files and directories that should be excluded from Git tracking.
 
-## Installation and Setup
+## Getting Started
 
-Follow these steps to run PreprocessIQ locally.
+Follow these instructions to set up and run PreprocessIQ on your local machine.
+
+### Prerequisites
+
+- Python installed on your system.
+- Git installed on your system.
+- A compatible CSV dataset.
 
 ### 1. Clone the Repository
 
@@ -124,61 +183,70 @@ python -m venv venv
 
 ### 4. Activate the Virtual Environment
 
-**Windows:**
+**Windows**
 
 ```bash
 venv\Scripts\activate
 ```
 
-**macOS / Linux:**
+**macOS / Linux**
 
 ```bash
 source venv/bin/activate
 ```
 
-### 5. Install Dependencies
+### 5. Install the Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 6. Run the Application
+### 6. Launch the Application
 
 ```bash
 streamlit run app.py
 ```
 
-The application will open in your default web browser.
+Once the application starts, open the local URL displayed in your terminal to access PreprocessIQ.
 
-## Usage
+## How to Use
 
-1. Launch the application.
-2. Upload a CSV dataset.
-3. Inspect the dataset overview and its contents.
+1. Open PreprocessIQ in your browser.
+2. Upload a compatible CSV dataset.
+3. Inspect the dataset overview and data quality.
 4. Review the original and cleaned dataset.
 5. Select the target column.
-6. Choose classification or regression.
-7. Run the benchmarking process.
-8. Compare the evaluation results.
-9. Review the best-performing preprocessing and model combination.
+6. Choose the classification or regression task.
+7. Start the benchmarking process.
+8. Compare the model and preprocessing results.
+9. Identify the best-performing combination.
 
 ## Limitations
 
-- The application currently accepts CSV datasets.
-- Dataset preparation is designed to handle common data-quality issues and may require additional handling for highly complex datasets.
-- Benchmarking performance depends on dataset size, feature characteristics, and the selected machine learning task.
-- The best-performing combination is determined using the evaluation metrics implemented for the selected task.
+- Currently supports CSV dataset uploads.
+- Automated preparation focuses on common data-quality issues; complex datasets may require additional manual preparation.
+- Benchmarking performance can vary depending on dataset size, feature characteristics, and target selection.
+- The best-performing combination is determined using the evaluation metrics implemented for the selected machine learning task.
 
-## Future Improvements
+## Future Scope
 
-- Support for additional dataset formats.
+PreprocessIQ can be extended with several additional capabilities:
+
+- Support for Excel and other dataset formats.
 - More preprocessing techniques and machine learning algorithms.
-- Additional evaluation metrics and visualization options.
-- Model export and deployment capabilities.
-- Enhanced benchmarking and configuration options.
+- Additional evaluation metrics and comparison visualizations.
+- Model export and deployment functionality.
+- Advanced benchmarking configurations.
+- More detailed performance analysis and reporting.
 
 ## Project Objective
 
-The objective of PreprocessIQ is to make machine learning preprocessing and model comparison more accessible by automating repetitive experimentation.
+The goal of PreprocessIQ is to make machine learning experimentation more structured, accessible, and efficient.
 
-By combining dataset inspection, preprocessing, cross-validation, and model benchmarking in one interactive application, PreprocessIQ provides a structured way to evaluate machine learning workflows and make data-driven model selection decisions.
+By integrating dataset inspection, automated data preparation, preprocessing pipelines, cross-validation, and model benchmarking into one interactive platform, the project aims to reduce repetitive experimentation and help users make more informed decisions when building machine learning workflows.
+
+---
+
+<p align="center">
+  <strong>PreprocessIQ — Prepare Smarter. Benchmark Better.</strong>
+</p>
